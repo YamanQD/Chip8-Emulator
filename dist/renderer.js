@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 var Renderer = /** @class */ (function () {
     function Renderer(scale) {
         this.scale = scale;
@@ -43,4 +41,4 @@ var Renderer = /** @class */ (function () {
     };
     return Renderer;
 }());
-exports.default = Renderer;
+export default Renderer;
