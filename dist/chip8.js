@@ -1,7 +1,9 @@
 import Renderer from './renderer.js';
 import Keyboard from './keyboard.js';
+import Speaker from './speaker.js';
 var renderer = new Renderer(20);
 var keyboard = new Keyboard();
+var speaker = new Speaker();
 var loop;
 var fps = 60, fpsInterval, now, then, startTime, elapsed;
 function init() {
