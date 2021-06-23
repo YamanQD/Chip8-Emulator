@@ -39,6 +39,10 @@ var Renderer = /** @class */ (function () {
             }
         }
     };
+    Renderer.prototype.testRenderer = function () {
+        this.setPixel(0, 0);
+        this.setPixel(5, 3);
+    };
     return Renderer;
 }());
 export default Renderer;
