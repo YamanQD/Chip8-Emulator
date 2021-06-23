@@ -1,12 +1,12 @@
 class Renderer {
-	columns: number;
-	rows: number;
-	scale: number;
+	private columns: number;
+	private rows: number;
+	private scale: number;
 
-	canvas: HTMLCanvasElement;
-	ctx: CanvasRenderingContext2D;
+	private canvas: HTMLCanvasElement;
+	private ctx: CanvasRenderingContext2D;
 
-	display: number[];
+	private display: number[];
 
 	constructor(scale: number) {
 		this.scale = scale;
