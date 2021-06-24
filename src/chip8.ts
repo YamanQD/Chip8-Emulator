@@ -1,10 +1,12 @@
 import Renderer from './renderer.js';
 import Keyboard from './keyboard.js';
 import Speaker from './speaker.js';
+import CPU from './cpu.js';
 
 const renderer = new Renderer(20);
 const keyboard = new Keyboard();
 const speaker = new Speaker();
+const cpu = new CPU(renderer, keyboard, speaker);
 
 let loop;
 
@@ -20,11 +22,8 @@ function init() {
 	startTime = Date.now();
 	then = startTime;
 
-	// THIS PIECE OF CODE IS FOR TESTING PURPOSES, DELETE WHEN DONE TESTING
-	renderer.testRenderer();
-	renderer.render();
-	// TEST CODE END
-
+	cpu.loadSpritesIntoMemory();
+	cpu.loadRom('BLINKY');
 	loop = requestAnimationFrame(step);
 }
 
@@ -33,7 +32,7 @@ function step() {
 	elapsed = now - then;
 
 	if (elapsed > fpsInterval) {
-		// Cycle the CPU
+		cpu.cycle();
 	}
 
 	loop = requestAnimationFrame(step);
