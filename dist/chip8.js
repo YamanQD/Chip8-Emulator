@@ -13,7 +13,7 @@ function init() {
     startTime = Date.now();
     then = startTime;
     cpu.loadSpritesIntoMemory();
-    cpu.loadRom('BLINKY');
+    cpu.loadRom('Tank.ch8');
     loop = requestAnimationFrame(step);
 }
 function step() {
