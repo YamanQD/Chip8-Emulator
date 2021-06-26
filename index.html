@@ -11,7 +11,14 @@
 
 <body>
 	<canvas></canvas>
-	<script src="dist/chip8.js" type="module"></script>
+	<select name="genre" id="genre">
+		<option value="games" selected>Games</option>
+		<option value="programs">Programs</option>
+		<option value="demos">Demos</option>
+	</select>
+	<select name="roms" id="roms"></select>
+	<div id="description"></div>
+	<script src="dist/ui.js" type="module"></script>
 </body>
 
 </html>

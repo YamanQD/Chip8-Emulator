@@ -50,15 +50,10 @@ class Renderer {
 			const y = Math.floor(i / this.columns) * this.scale;
 
 			if (this.display[i]) {
-				this.ctx.fillStyle = '#000';
+				this.ctx.fillStyle = '#FFF';
 				this.ctx.fillRect(x, y, this.scale, this.scale);
 			}
 		}
-	}
-
-	testRenderer() {
-		this.setPixel(0, 0);
-		this.setPixel(5, 3);
 	}
 }
 

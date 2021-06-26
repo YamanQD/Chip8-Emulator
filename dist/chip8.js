@@ -2,18 +2,18 @@ import Renderer from './renderer.js';
 import Keyboard from './keyboard.js';
 import Speaker from './speaker.js';
 import CPU from './cpu.js';
-var renderer = new Renderer(20);
+var renderer = new Renderer(15);
 var keyboard = new Keyboard();
 var speaker = new Speaker();
 var cpu = new CPU(renderer, keyboard, speaker);
 var loop;
 var fps = 60, fpsInterval, now, then, startTime, elapsed;
-function init() {
+export function init(rom) {
     fpsInterval = 1000 / fps;
     startTime = Date.now();
     then = startTime;
     cpu.loadSpritesIntoMemory();
-    cpu.loadRom('../roms/games/Space Invaders [David Winter].ch8');
+    cpu.loadRom(rom);
     loop = requestAnimationFrame(step);
 }
 function step() {
@@ -24,4 +24,3 @@ function step() {
     }
     loop = requestAnimationFrame(step);
 }
-init();

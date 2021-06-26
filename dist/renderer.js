@@ -34,14 +34,10 @@ var Renderer = /** @class */ (function () {
             var x = (i % this.columns) * this.scale;
             var y = Math.floor(i / this.columns) * this.scale;
             if (this.display[i]) {
-                this.ctx.fillStyle = '#000';
+                this.ctx.fillStyle = '#FFF';
                 this.ctx.fillRect(x, y, this.scale, this.scale);
             }
         }
-    };
-    Renderer.prototype.testRenderer = function () {
-        this.setPixel(0, 0);
-        this.setPixel(5, 3);
     };
     return Renderer;
 }());
