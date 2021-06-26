@@ -13,7 +13,7 @@ function init() {
     startTime = Date.now();
     then = startTime;
     cpu.loadSpritesIntoMemory();
-    cpu.loadRom('Tank.ch8');
+    cpu.loadRom('../roms/games/Space Invaders [David Winter].ch8');
     loop = requestAnimationFrame(step);
 }
 function step() {
